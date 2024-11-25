@@ -1,0 +1,4 @@
+ipykernel
+openai-whisper
+moviepy
+numpy<2.0.0
