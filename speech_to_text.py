@@ -31,6 +31,8 @@ model = whisper.load_model("base", device="cuda")
 
 videos = [video for video in os.listdir(video_path) if video.endswith('.mp4')]
 
+sys.stderr = open('/data1/video_understanding/dataset/sub_medium/99——error.log', 'w')
+
 for video in tqdm(videos, desc="Processing videos", unit="video"):
     with open(os.devnull, 'w') as devnull:
         try:

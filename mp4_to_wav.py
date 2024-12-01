@@ -15,6 +15,8 @@ sub_path = "/data1/video_understanding/dataset/sub"
 
 videos = [video for video in os.listdir(video_path) if video.endswith('.mp4')]
 
+sys.stderr = open('error_3999.log', 'w')
+
 for video in tqdm(videos, desc="Processing videos", unit="video"):
     with open(os.devnull, 'w') as devnull:
         try:
